@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "WXPUSHER_APP_TOKEN": "@wxpusher_app_token",
+    "WXPUSHER_UID": "@wxpusher_uid",
+    "TIANAPI_KEY": "@tianapi_key",
+    "TIANAPI_URL": "https://apis.tianapi.com/wxhottopic/index",
+    "PUSH_HOUR": "9",
+    "PUSH_MINUTE": "0",
+    "HOT_LIST_COUNT": "10"
+  }
+}
